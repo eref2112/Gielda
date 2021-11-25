@@ -53,7 +53,7 @@ public class Kontroler {
         System.out.println(so);
 
         //Testujemy zaglowke
-        zaglowka = new Zaglowka("O","Carina",1978, 30_000f, 1,1);
+        zaglowka = new Zaglowka("Z","Carina",1978, 30_000f, 1,1);
         zaglowka.setLiczbaMiejsc(5);
         zaglowka.setPowZagli(14f);
         System.out.println(zaglowka);
