@@ -4,10 +4,15 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Pojazd {
+    //Poneważ to ma być stała to poprzedzona słowem kluczowym final
+    final public static String SPRZEDANY = "S";
+    final public static String WYCOFANY = "W";
+    final public static String PRZYJETY = "P";
+
     private int id = 0;
     private String typPojazdu;
     private String marka;
-    private String status;
+    private String status;//"S" - sprzedany, "P" - przyjęty, "W" - wycofany,
     private int rok;
     private Float cena;
     private int idWlasciciel;
@@ -34,12 +39,20 @@ public class Pojazd {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTypPojazdu() {
         return typPojazdu;
     }
 
     public String getMarka() {
         return marka;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getStatus() {
@@ -109,6 +122,7 @@ public class Pojazd {
     @Override
     public String toString() {
         return "Pojazd{" +
+                "id='" + id + '\'' +
                 "typPojazdu='" + typPojazdu + '\'' +
                 ", marka='" + marka + '\'' +
                 ", rok=" + rok +

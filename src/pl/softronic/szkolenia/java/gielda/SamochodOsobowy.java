@@ -62,6 +62,7 @@ public class SamochodOsobowy extends Pojazd {
 
     public String toString() {
         return "SamochodOsobowy{" +
+                "id='" + super.getId() + '\'' +
                 "liczbaMiejsc=" + liczbaMiejsc +
                 ", marka='" + super.getMarka() + '\'' +
                 ", nadwozie='" + nadwozie + '\'' +
