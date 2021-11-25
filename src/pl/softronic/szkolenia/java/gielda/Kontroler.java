@@ -8,7 +8,7 @@ public class Kontroler {
     UrzadSkarbowy us;
     Pojazd pojazd;
     SamochodOsobowy so;
-
+    Zaglowka zaglowka;
 
     public void uruchomProgram() {
         //Uruchamia metody: tworzącą i testujacą giełdę
@@ -51,6 +51,13 @@ public class Kontroler {
         //TODO: "Trzeba odkomentować i poprawić ustawienie daty";
         //so.setDataPrzegladu(LocalDate.parse("23-02-2021"));
         System.out.println(so);
+
+        //Testujemy zaglowke
+        zaglowka = new Zaglowka("O","Carina",1978, 30_000f, 1,1);
+        zaglowka.setLiczbaMiejsc(5);
+        zaglowka.setPowZagli(14f);
+        System.out.println(zaglowka);
+
     }
 
     private void wczytajDane() {
