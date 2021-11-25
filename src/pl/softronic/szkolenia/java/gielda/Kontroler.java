@@ -10,7 +10,7 @@ public class Kontroler {
     }
 
     private void wczytajDane() {
-        
+
     }
 
     public void tworzGielde() {
