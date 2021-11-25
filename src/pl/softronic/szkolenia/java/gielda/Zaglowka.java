@@ -58,6 +58,7 @@ public class Zaglowka extends Pojazd {
     public String toString() {
         return "Zaglowka{" +
                 "liczbaMiejsc=" + liczbaMiejsc +
+                ", marka='" + super.getMarka() + '\'' +
                 ", dataPrzegladu=" + dataPrzegladu +
                 ", powZagli=" + powZagli +
                 ", dlugosc=" + dlugosc +
