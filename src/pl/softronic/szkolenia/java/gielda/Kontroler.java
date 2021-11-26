@@ -25,10 +25,13 @@ public class Kontroler {
         gielda.setNazwa("Giełda wspaniałych pojazdów");
         gielda.adres = "Warszawa ul. Jasna ";
 
+
         //Tworzymy Urząd Skarbowy
         us = new UrzadSkarbowy();
         us.setNazwa("Urząd Skarbowy - Warszawa Praga");
         us.adres = "Warszawa ul. Jagiellońska 15 ";
+
+        gielda.setUrzadSkarbowy(us);
 
 
 
@@ -103,6 +106,38 @@ public class Kontroler {
 
         //Jakie samochody są na giełdzie
         gielda.wyswietlSamochodyOsobowe();
+
+        //Testujemy klientów dwóch
+        Klient kl1 = new Klient("1234","Jan Kowalski");
+        Klient kl2 = new Klient("1235","Jan Wiśniewski");
+
+        System.out.println(kl1);
+        System.out.println(kl2);
+
+        //Testujemy  dwóch sprzedawców
+        Sprzedawca sp1 = new Sprzedawca(1,"Jan Kowalski");
+        Sprzedawca sp2 = new Sprzedawca(2,"Jan Wiśniewski");
+
+        //Powinniśmy wprowadzić na ich na listę sprzedawców na Giełdzie
+        gielda.zatrudnijSprzedawce(sp1);
+        gielda.zatrudnijSprzedawce(sp2);
+
+        //System.out.println(sp1);
+        //System.out.println(sp2);
+
+        gielda.wyswietlListeSprzedawcow();
+
+        //Testujemy  dwa podatki
+        Podatek p1 = new Podatek(1,"1234", 2_000f);
+        Podatek p2 = new Podatek(2,"1234", 3000f);
+
+        System.out.println(p1);
+        System.out.println(p2);
+
+        gielda.sprzedajSamochodOsobowy(1, "1234",2);
+        //Jakie samochody są na giełdzie
+        gielda.wyswietlSamochodyOsobowe();
+
     }
 
     private void wczytajDane() {
